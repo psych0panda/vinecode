@@ -42,7 +42,7 @@ class NoteSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Note
-        exclude = ('date_create',)
+        exclude = ('date_create', 'slug')
         extra_kwargs = {
             'url': {
                 'view_name': 'notes:note-detail',
